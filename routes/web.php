@@ -26,4 +26,5 @@ Auth::routes([
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('verified');
 
-Route::post('student/create', 'StudentController@create')->name('student.create');
+Route::get('student/create',[StudentController::class, 'create'] )->name('student.create');
+Route::post('student/store',[StudentController::class, 'store'] )->name('student.store');
